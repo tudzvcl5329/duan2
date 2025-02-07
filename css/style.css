@@ -382,10 +382,8 @@ ul{
   }
   
   /* Avatar - Tablet */
-  .avatar {
-      width: 150px;
-      height: 150px;
-      top: -60px;
+  .avatar { 
+      display: none;
   }
 }
 
@@ -399,9 +397,7 @@ ul{
   
   /* Avatar - Mobile */
   .avatar {
-      width: 120px;
-      height: 120px;
-      top: -50px;
+      display: none;
   }
   
   /* Phần Thông tin cá nhân - Mobile */
