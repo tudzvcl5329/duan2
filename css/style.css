@@ -382,12 +382,23 @@ ul{
   }
   
   /* Avatar - Tablet */
-  .avatar { 
-      display: none;
+  .avatar {
+      width: 150px;
+      height: 150px;
+      top: -60px;
   }
 }
 
 @media (max-width: 768px) {
+  /* Prevent horizontal scrolling */
+  body {
+      overflow-x: hidden;
+  }
+  
+  html, body {
+      width: 100%;
+  }
+  
   /* Navbar - Mobile */
   #nav-bar .container {
       flex-direction: column;
@@ -397,7 +408,9 @@ ul{
   
   /* Avatar - Mobile */
   .avatar {
-      display: none;
+      width: 120px;
+      height: 120px;
+      top: -50px;
   }
   
   /* Phần Thông tin cá nhân - Mobile */
@@ -417,7 +430,20 @@ ul{
           grid-template-columns: 1fr;
       }
   }
+  
+  /* Chứng chỉ - Mobile */
+  .certificates-container {
+      grid-template-columns: 1fr;
+  }
+  
+  /* Dự án - Mobile */
+  .du-an-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+  .du-an-border {
+      width: 100%;
+      max-width: none;
+  }
 }
-
-
 
