@@ -101,10 +101,20 @@ ul{
     margin-bottom: 30px;
 }
 
-.border-1{
-    padding: 20px;
-    border-style: ridge;
-    border-width: 2px;
+.border-1 {
+  padding: 20px;
+  border-style: ridge;
+  border-width: 2px;
+  min-height: 200px; 
+  max-height: auto; 
+}
+
+#job-info .container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: flex-start; 
 }
 
 .border-1 h4{
@@ -365,100 +375,38 @@ ul{
   background-color: #0056b3;
 }
 
+@media (max-width: 1024px) {
+  /* Navbar - Tablet */
+  #nav-bar .start {
+      display: none;
+  }
+}
 
-
-/* Tablet (Từ 768px trở xuống) */
 @media (max-width: 768px) {
-  .container {
-    width: 95%;
-    padding: 15px;
+  /* Navbar - Mobile */
+  #nav-bar .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
   }
-
-  .du-an-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
+  
+  /* Phần Thông tin cá nhân - Mobile */
+  #about .container {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
   }
-
-  .du-an-border {
-    flex: 1 1 100%;
-    min-width: auto;
-    max-width: 100%;
+  
+  /* Phần Thông tin nghề nghiệp - Tablet */
+  #job-info .container {
+      grid-template-columns: 1fr 1fr;
   }
-
-  .grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .grid i {
-    font-size: 40px;
-  }
-
-  .toggle-btn {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .avatar {
-    width: 150px;
-    height: 150px;
-    top: -60px;
+  
+  /* Phần Thông tin nghề nghiệp - Mobile */
+  @media (max-width: 480px) {
+      #job-info .container {
+          grid-template-columns: 1fr;
+      }
   }
 }
 
-/* Mobile (Từ 480px trở xuống) */
-@media (max-width: 480px) {
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
 
-  .du-an-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .du-an-border {
-    width: 100%;
-    max-width: none;
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .grid i {
-    font-size: 35px;
-  }
-
-  .timeline {
-    text-align: center;
-  }
-
-  .toggle-btn {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .avatar {
-    width: 120px;
-    height: 120px;
-    top: -50px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  .border-1 {
-    padding: 15px;
-  }
-}
